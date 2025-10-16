@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KubaK\\Documents\\git\\github-jk-is-2025-sk2\\program001-vypis-rady\\program001-vypis-rady.csproj": {}
+    "C:\\Users\\bulir\\Documents\\Git\\github-pb-is-2025-sk2\\IS Programy\\program001-vypis-rady\\program001-vypis-rady.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KubaK\\Documents\\git\\github-jk-is-2025-sk2\\program001-vypis-rady\\program001-vypis-rady.csproj": {
+    "C:\\Users\\bulir\\Documents\\Git\\github-pb-is-2025-sk2\\IS Programy\\program001-vypis-rady\\program001-vypis-rady.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KubaK\\Documents\\git\\github-jk-is-2025-sk2\\program001-vypis-rady\\program001-vypis-rady.csproj",
+        "projectUniqueName": "C:\\Users\\bulir\\Documents\\Git\\github-pb-is-2025-sk2\\IS Programy\\program001-vypis-rady\\program001-vypis-rady.csproj",
         "projectName": "program001-vypis-rady",
-        "projectPath": "C:\\Users\\KubaK\\Documents\\git\\github-jk-is-2025-sk2\\program001-vypis-rady\\program001-vypis-rady.csproj",
-        "packagesPath": "C:\\Users\\KubaK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KubaK\\Documents\\git\\github-jk-is-2025-sk2\\program001-vypis-rady\\obj\\",
+        "projectPath": "C:\\Users\\bulir\\Documents\\Git\\github-pb-is-2025-sk2\\IS Programy\\program001-vypis-rady\\program001-vypis-rady.csproj",
+        "packagesPath": "C:\\Users\\bulir\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bulir\\Documents\\Git\\github-pb-is-2025-sk2\\IS Programy\\program001-vypis-rady\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KubaK\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\bulir\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"

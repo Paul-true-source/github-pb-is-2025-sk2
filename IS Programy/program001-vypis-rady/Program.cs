@@ -21,11 +21,14 @@ while (again == "a")
     int first;
     while ((int.TryParseparse(Console.ReadLine())))
 
-    Console.WriteLine();
+        Console.WriteLine();
     Console.WriteLine("Pro aplikování programu stiskni a");
     again = Console.ReadLine();
 
-
 }
-
-
+Console.Write("Zadejte poslední číslo řady (celé číslo):");
+int.step;
+while (!int.TryParse (Console.ReadLine(),out step))
+{
+    Console.Write("Nezadali jste celé číslo. Zadejte diferenci znovu:");
+}
