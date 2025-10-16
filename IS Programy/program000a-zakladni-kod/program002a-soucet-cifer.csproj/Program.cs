@@ -1,4 +1,4 @@
-﻿using System.Runtime.ExceptionServices;
+using System.Runtime.ExceptionServices;
 
 string again = "a";
 while (again == "a")
@@ -29,29 +29,39 @@ while (again == "a")
 
 }
 Console.Write("Zadejte poslední číslo řady (celé číslo):");
-int.step;
+intstep;
 while (!int.TryParse (Console.ReadLine(),out step))
 {
     Console.Write("Nezadali jste celé číslo. Zadejte diferenci znovu:");
 }
 
+int suma = 0;
+int numberBackup = number;
+int digit;
 
-//Výstup
-Console.WriteLine();
-Console.WriteLine("=====================================");
-Console.WriteLine("Zadali jste tyto hodnoty: ");
-Console.WriteLine("První číslo řady: {0}", first);
-Console.WriteLine("Poslední číslo řady: {0}", last);
-Console.WriteLine("Diference: {0}", step);
-Console.WriteLine("=====================================");
-Console.WriteLine("První číslo: {0}; Poslední číslo: {1}; Diference: {2}", first, last, step);
-Console.WriteLine("=====================================");
-Console.WriteLine("Výpis číselné řady");
-
-int current = first;
-while(current <= last) {
-    Console.WriteLine(current);
-    current = current + step; //přičtení diference k atuální vypisované hodnotě
-
-
+//Pokud je vstup záprný, tak ho změníme na kladný
+if (number < 0)
+{
+    numberBackup = -number;
 }
+
+while (numberBackup >= 10)
+{
+    digit = number % 10; //určí se nám zbytek
+    number = (number - digit) / 10;
+    Console.WriteLine("Hodnota zbytku: {0}", digit);
+    suma = suma + digit;
+}
+
+//musíme poslední cifru vypsat
+Console.WriteLine("Poslední zbytek ={0}", number);
+
+//musíme poslední cifru přičíst
+suma = suma + number;
+
+Console.WriteLine();
+Console.WriteLine("Součet cifer čísla {0} je {1}",numberBackup, suma);
+
+Console.WriteLine();
+Console.WriteLine("Pro opakování programu stiskněte klávesu a");
+again = Console.ReadLine();
