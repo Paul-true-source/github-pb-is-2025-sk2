@@ -20,6 +20,6 @@ while (again == "a")
     Console.Write("Zadejte první číslo řady (celé číslo): ");
     int first;
     while (!int.TryParse(Console.ReadLine(), out first))
-    {
+    
         Console.Write("Nezadali jste celé číslo. Zadejte první číslo řady znovu: ");
     }

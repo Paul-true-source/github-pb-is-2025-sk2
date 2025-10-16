@@ -1,4 +1,6 @@
-﻿string again = "a";
+﻿using System.Runtime.ExceptionServices;
+
+string again = "a";
 while (again == "a")
 {
     Console.Clear();
@@ -6,7 +8,7 @@ while (again == "a")
     Console.WriteLine("*************Vypiš číselné řady***********");
     Console.WriteLine("******************************************");
     Console.WriteLine("******************************************");
-    Console.WriteLine("****************Pavel Loyan**************");
+    Console.WriteLine("****************Pavel Bulíř***************");
     Console.WriteLine("*****************2. 10. 2025**************");
     Console.WriteLine("******************************************");
     Console.WriteLine("******************************************");
@@ -43,3 +45,13 @@ Console.WriteLine("Poslední číslo řady: {0}", last);
 Console.WriteLine("Diference: {0}", step);
 Console.WriteLine("=====================================");
 Console.WriteLine("První číslo: {0}; Poslední číslo: {1}; Diference: {2}", first, last, step);
+Console.WriteLine("=====================================");
+Console.WriteLine("Výpis číselné řady");
+
+int current = First;
+while(current <= last) {
+    Console.WriteLine(current);
+    current = current + step; //přičtení diference k atuální vypisované hodnotě
+
+
+}
