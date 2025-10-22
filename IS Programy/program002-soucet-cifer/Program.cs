@@ -1,54 +1,42 @@
-﻿﻿string again = "a";
-while (again == "a")
-{
-    Console.Clear();
-    Console.WriteLine("************************************************");
-    Console.WriteLine("*********** Součet a součin cifer  *************");
-    Console.WriteLine("************************************************");
-    Console.WriteLine("************************************************");
-    Console.WriteLine("**************** Pavel Bulíř *******************");
-    Console.WriteLine("***************** 2.10.2025 ********************");
-    Console.WriteLine("************************************************");
-    Console.WriteLine("************************************************");
-    Console.WriteLine();
+﻿string again = "a";
+        while (again == "a")
+        {
+            Console.Clear();
+            Console.WriteLine("************************************************");
+            Console.WriteLine("*********** Součet a součin cifer  *************");
+            Console.WriteLine("************************************************");
+            Console.WriteLine("**************** Pavel Bulíř *******************");
+            Console.WriteLine("***************** 2.10.2025 ********************");
+            Console.WriteLine("************************************************");
+            Console.WriteLine();
 
-    Console.Write("Zadejte celé číslo: ");
-    int number;
-    while (!int.TryParse(Console.ReadLine(), out number))
-    {
-        Console.Write("Nezadali jste celé číslo. Zadejte ho znovu: ");
-    }
+            Console.Write("Zadejte celé číslo: ");
+            string vstup = Console.ReadLine();
 
-    int suma = 0;
-    int numberBackup = number;
-    int digit;
+            // Ošetření, jestli je to číslo
+            int number;
+            while (!int.TryParse(vstup, out number))
+            {
+                Console.Write("Nezadali jste celé číslo. Zadejte ho znovu: ");
+                vstup = Console.ReadLine();
+            }
 
-    // Pokud je vstup záporný, tak ho změníme na kladný
-    if (number < 0)
-    {
-        number = -number;
-    }
+            // Odstranění záporného znaménka
+            if (vstup.StartsWith("-"))
+                vstup = vstup.Substring(1);
 
-    while (number >= 10)
-    {
-        digit = number % 10; // určí se nám zbytek
-        number = (number - digit) / 10;
-        Console.WriteLine("Hodnota zbytku = {0}", digit);
-        suma = suma + digit;
-    }
+            int soucet = 0;
 
-    // musíme poslední cifru vypsat
-    Console.WriteLine("Poslední zbytek = {0}", number);
+            //Tady je "jiný" způsob — práce s řetězcem
+            foreach (char c in vstup)
+            {
+                soucet += (int)char.GetNumericValue(c);
+            }
 
-    // musíme poslední cifru přičíst
-    suma = suma + number;
+            Console.WriteLine();
+            Console.WriteLine($"Součet cifer čísla {number} je {soucet}");
 
-    Console.WriteLine();
-    Console.WriteLine("Součet cifer čísla {0} je {1}", numberBackup, suma);
-
-    Console.WriteLine();
-    Console.WriteLine("Pro opakování programu stiskněte klávesu a");
-    again = Console.ReadLine();
-
-}
-
+            Console.WriteLine();
+            Console.WriteLine("Pro opakování programu stiskněte klávesu a");
+            again = Console.ReadLine();
+        }
