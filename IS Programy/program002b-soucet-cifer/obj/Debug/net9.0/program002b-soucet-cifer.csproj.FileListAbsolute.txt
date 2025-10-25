@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\bin\Debug\net9.0\program002b-soucet-cifer.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\bin\Debug\net9.0\program002b-soucet-cifer.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\bin\Debug\net9.0\program002b-soucet-cifer.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\bin\Debug\net9.0\program002b-soucet-cifer.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\bin\Debug\net9.0\program002b-soucet-cifer.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\refint\program002b-soucet-cifer.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\program002b-soucet-cifer.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program002b-soucet-cifer\obj\Debug\net9.0\ref\program002b-soucet-cifer.dll

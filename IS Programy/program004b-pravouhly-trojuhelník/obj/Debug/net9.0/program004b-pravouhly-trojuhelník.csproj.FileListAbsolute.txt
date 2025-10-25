@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\bin\Debug\net9.0\program004b-pravouhly-trojuhelník.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\bin\Debug\net9.0\program004b-pravouhly-trojuhelník.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\bin\Debug\net9.0\program004b-pravouhly-trojuhelník.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\bin\Debug\net9.0\program004b-pravouhly-trojuhelník.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\bin\Debug\net9.0\program004b-pravouhly-trojuhelník.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\refint\program004b-pravouhly-trojuhelník.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\program004b-pravouhly-trojuhelník.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004b-pravouhly-trojuhelník\obj\Debug\net9.0\ref\program004b-pravouhly-trojuhelník.dll
