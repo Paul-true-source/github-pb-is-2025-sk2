@@ -91,12 +91,80 @@ Console.Write("Zadejte horní mez (celé číslo): ");
     Console.WriteLine("==========================================");
     Console.WriteLine();
 
-        
+
 
     //vykreslování přesípacích hodin
+    if (max >= 3)
+    {
+        Console.WriteLine();
+        Console.WriteLine("====================================");
+        Console.WriteLine();
+        Console.WriteLine($"Přesýpací hodiny o velikosti {max}");
+        Console.WriteLine();
 
 
-    Console.WriteLine();
+        //tento cyklus se stará o to aby se vykreslil správný počet řádků
+        for (int i = 0; i < max; i++) // kdyby int i = 1 tak by i<= max
+        {
+            int spaces, stars;
+
+            if (i < max / 2)
+            {
+                //horní polovina - počet mezer v i-tém řádku
+                spaces = i;  //1. řádek = i začíná od nuly stejně jako mezery tak proto se to rovná i
+
+
+                //horní polovina - s každým dalším řádkem ubývají 2 hvězdičky 
+                stars = max - 2 * i; // 10 -2*0 = 10; 10 - 2*1 = 8; 10 -2*2 = 6 => funguje
+
+
+            }
+            else
+            {
+                //dolní polovina - počet mezer v i-tém řádku
+                spaces = max - i - 1; //musíme od i odečíst 1 protože začíná v 0
+
+                if (max % 2 == 1)
+                {
+                    stars = 2 * (i - max / 2) + 1;
+                }
+                else
+                {
+                    stars = 2 * (i - max / 2) + 2;
+                }
+
+            }
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+        //vykreslení správného počtu mezer pro každý řádek
+        //sp = space
+        for (int sp = 0; sp < spaces; sp++)
+            System.Console.Write("");
+
+
+        //vykreslení  počtu hvězdiček pro každý řádek
+         //st = star=> 1 hvězdička
+        for (int st = 0; st < stars; st++)
+            Console.WriteLine("*");
+                
+        }
+        
+        
+
+
+
+
+    }
+    else
+        Console.WriteLine("Maximum je menší než 3 => obrazec se nebude vykreslovat!!!");
+
+
+
+
+
+
+
+        Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
