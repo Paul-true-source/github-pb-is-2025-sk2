@@ -139,13 +139,15 @@ Console.Write("Zadejte horní mez (celé číslo): ");
         //vykreslení správného počtu mezer pro každý řádek
         //sp = space
         for (int sp = 0; sp < spaces; sp++)
-            System.Console.Write("");
+            System.Console.Write(" ");
 
 
         //vykreslení  počtu hvězdiček pro každý řádek
          //st = star=> 1 hvězdička
         for (int st = 0; st < stars; st++)
-            Console.WriteLine("*");
+            System.Console.Write("*");
+
+            Console.WriteLine();
                 
         }
         
@@ -164,7 +166,7 @@ Console.Write("Zadejte horní mez (celé číslo): ");
 
 
 
-        Console.WriteLine();
+    Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
