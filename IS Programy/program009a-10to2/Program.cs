@@ -36,11 +36,12 @@ while (again == "a")
     }
 
     Console.Write("Desítkové číslo {0} ve dvojkové soustavě = ", backupNumber10);
-    for(uint j = i - 1; j>= 0 ; j--)
+    for(int j = (int)i - 1; j>= 0 ; j--)
     {
         Console.Write("{0}", myArray[j]);
     }
 
+    System.Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 
