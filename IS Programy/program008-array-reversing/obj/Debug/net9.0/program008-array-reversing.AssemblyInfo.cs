@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("program007a-bubble-sort")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("program008-array-reversing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8e95b0c7f71c190e3140cb60f68a05d24b7afe0")]
-[assembly: System.Reflection.AssemblyProductAttribute("program007a-bubble-sort")]
-[assembly: System.Reflection.AssemblyTitleAttribute("program007a-bubble-sort")]
+[assembly: System.Reflection.AssemblyProductAttribute("program008-array-reversing")]
+[assembly: System.Reflection.AssemblyTitleAttribute("program008-array-reversing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Vygenerované třídou WriteCodeFragment nástroje MSBuild

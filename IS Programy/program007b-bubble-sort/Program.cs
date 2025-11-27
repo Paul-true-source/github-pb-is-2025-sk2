@@ -107,6 +107,15 @@ for(int i = 0; i < n; i++)
      Console.WriteLine("Čas seřazení čísel pomocí BS: {0}", myStopwatch.Elapsed);
 
 
+   Console.WriteLine(myRandNumbs[n-1]);
+
+
+
+
+
+
+
+
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
