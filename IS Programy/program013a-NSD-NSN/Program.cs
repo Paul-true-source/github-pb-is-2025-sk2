@@ -1,9 +1,35 @@
-﻿string again = "a";
+﻿using System.Reflection.Metadata;
+using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
+
+string again = "a";
 while (again == "a")
 {
     Console.Clear();
+    //metoda pro výpis hlavičky/razítka
+    razitko();    
+    ulong a = nactiCislo("Zadejte přirozené číslo a: ");
+    ulong b = nactiCislo("Zadejte přirozené číslo b: ");
+
+    ulong nsd = vypocitatNSD(a, b);
+    ulong nsn = vypocitatNSN(a, b, nsd);
+
+    zobrazitVysledky(a, b, nsd, nsn);
+
+
+
+
+
+
+    Console.WriteLine();
+    Console.WriteLine("Pro opakování programu stiskněte klávesu a");
+    again = Console.ReadLine();
+}
+
+static void razitko()
+{
     Console.WriteLine("********************************************");
-    Console.WriteLine("*********** Výpis číselné řady *************");
+    Console.WriteLine("*********** Výpočet NSD a NSN **************");
     Console.WriteLine("********************************************");
     Console.WriteLine("********************************************");
     Console.WriteLine("************* Pavel Bulíř ******************");
@@ -11,14 +37,55 @@ while (again == "a")
     Console.WriteLine("********************************************");
     Console.WriteLine("********************************************");
     Console.WriteLine();
+}
 
-    Console.Write("Zadejte první číslo řady (celé číslo): ");
-    int first;
-    while (!int.TryParse(Console.ReadLine(), out first))
+static ulong nactiCislo(string zprava)
+{
+ Console.Write(zprava);
+    ulong cislo;
+    while (!ulong.TryParse(Console.ReadLine(), out cislo))
     {
-        Console.Write("Nezadali jste celé číslo. Zadejte první číslo řady znovu: ");
+        Console.Write("Nezadali jste přirozené číslo. Zadejte vstup znovu: ");
     }
 
-    Console.WriteLine("Pro opakování programu stiskněte klávesu a");
-    again = Console.ReadLine();
+    return cislo;
+}
+
+
+static ulong vypocitatNSD(ulong a, ulong b) // ulong a , ulong b nejsou stejné proměnné jenom přebírají hodnoty z předtím nadefinovaných proměnných
+{
+while(a != b)
+    {
+        if (a > b)
+        {
+            a = a - b;
+        }
+        else
+            b = b - a;
+    }
+
+
+
+
+    return a;
+}
+
+static void zobrazitVysledky(ulong a, ulong b, ulong nsd, ulong nsn)
+{
+    Console.ForegroundColor = ConsoleColor.DarkGreen;
+    Console.WriteLine();
+    Console.WriteLine("===========================");
+    Console.WriteLine($"NSD čísel {a} a {b} je {nsd}");
+    Console.ForegroundColor = ConsoleColor.DarkBlue;
+    Console.WriteLine();
+    Console.WriteLine("===========================");
+    Console.WriteLine($"NSN čísel {a} a {b} je {nsn}");
+    
+
+    Console.ForegroundColor = ConsoleColor.White;
+}
+
+static ulong vypocitatNSN(ulong a, ulong b, ulong nsd)
+{
+    return (a*b)/nsd;
 }
