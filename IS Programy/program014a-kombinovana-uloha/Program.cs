@@ -3,7 +3,7 @@ while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("********************************************");
-    Console.WriteLine("*********** Výpis číselné řady *************");
+    Console.WriteLine("*********** Kombinovaná úloha **************");
     Console.WriteLine("********************************************");
     Console.WriteLine("********************************************");
     Console.WriteLine("************* Pavel Bulíř ******************");
@@ -19,6 +19,9 @@ while (again == "a")
         Console.Write("Nezadali jste celé číslo. Zadejte první číslo řady znovu: ");
     }
 
+
+
+    Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
