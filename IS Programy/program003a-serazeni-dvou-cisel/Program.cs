@@ -2,7 +2,7 @@
 
 string again = "a";
 while (again == "a")
-
+{
     Console.Clear();
     Console.WriteLine("********************************************");
     Console.WriteLine("*********** Seřazení dvou čísel *************");
@@ -41,9 +41,9 @@ if (a > b)
 }
 
 Console.WriteLine("==============================");
-Console.WriteLine($"Seřazemá čísla: {a}, {b}");
+Console.WriteLine($"Seřazená čísla od nejmenšího po největší: {a}, {b}");
 Console.WriteLine("==============================");
 Console.WriteLine("Pro opakování programu stiskněte klávesu a");
 
 again = Console.ReadLine();
-    
+}    
