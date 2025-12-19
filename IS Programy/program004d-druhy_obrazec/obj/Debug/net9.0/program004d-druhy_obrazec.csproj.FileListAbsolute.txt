@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\bin\Debug\net9.0\program004d-druhy_obrazec.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\bin\Debug\net9.0\program004d-druhy_obrazec.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\bin\Debug\net9.0\program004d-druhy_obrazec.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\bin\Debug\net9.0\program004d-druhy_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\bin\Debug\net9.0\program004d-druhy_obrazec.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\refint\program004d-druhy_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\program004d-druhy_obrazec.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004d-druhy_obrazec\obj\Debug\net9.0\ref\program004d-druhy_obrazec.dll
