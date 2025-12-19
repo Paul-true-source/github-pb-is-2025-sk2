@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\bin\Debug\net9.0\program004c-prvni_obrazec.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\bin\Debug\net9.0\program004c-prvni_obrazec.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\bin\Debug\net9.0\program004c-prvni_obrazec.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\bin\Debug\net9.0\program004c-prvni_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\bin\Debug\net9.0\program004c-prvni_obrazec.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\refint\program004c-prvni_obrazec.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\program004c-prvni_obrazec.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program004c-prvni_obrazec\obj\Debug\net9.0\ref\program004c-prvni_obrazec.dll
