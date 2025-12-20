@@ -1,6 +1,4 @@
-﻿
-
-string again = "a";
+﻿string again = "a";
 while (again == "a")
 {
     Console.Clear();
@@ -21,38 +19,43 @@ while (again == "a")
         Console.Write("Nezadali jste celé číslo. Zadejte celé číslo znovu: ");
     }
     
-    for (int radek = 0; radek < velikost; radek++)
+    for (int radek = 1; radek <= velikost; radek++)
     {
+        
         Console.WriteLine();
-        for(int sloupec = 0; sloupec < velikost; sloupec++)
+        for(int sloupec = 1; sloupec <= velikost; sloupec++)
         {
-            if (radek == 0 || //horní okraj
-            radek == velikost -1 || // dolní okraj
-            sloupec == 0 || // levý okraj
-            sloupec == velikost -1 || //pravý okraj
-            radek == sloupec|| //šíkmá čára zleva nahoře dolů doprava
-            sloupec == (velikost - radek - 1)) //šikmá čára zprava nahoře dolů doleva
+            
+            if((radek-1)/2 % 2 == 0)
             {
-                Console.Write("*"); // pokud to tak je tak vypsat *
+                if ((sloupec + 1)/2%2 ==0)
+                {
+                    Console.Write(" ");
+                }
+                else
+                {
+                    Console.Write("*");
+                }
+            }
+            else if ((sloupec + 1)/2%2 ==0)
+            {
+                Console.Write("*");
             }
             else
             {
-                Console.Write(" "); //tímhle se vyplní zbytek
+                Console.Write(" ");
             }
+
+            
+            
+
+            
         }
-        
+
     }
 
-    
 
-        
-
-      
-
-
-
-
-    Console.WriteLine();
+Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
