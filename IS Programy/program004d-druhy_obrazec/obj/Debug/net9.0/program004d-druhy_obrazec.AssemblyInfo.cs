@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("program004d-druhy_obrazec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e67bd60e2a8c602ae2cb8d1069f2320c9a292460")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0c8fc413defbe3ca4e29cbdc58665c0604650cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("program004d-druhy_obrazec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("program004d-druhy_obrazec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

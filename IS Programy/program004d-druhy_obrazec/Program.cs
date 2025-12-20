@@ -1,15 +1,16 @@
 ﻿using System.Xml;
+using Microsoft.VisualBasic;
 
 string again = "a";
 while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("********************************************");
-    Console.WriteLine("*********** Výpis číselné řady *************");
+    Console.WriteLine("************** Druhý obrazec ***************");
     Console.WriteLine("********************************************");
     Console.WriteLine("********************************************");
     Console.WriteLine("************* Pavel Bulíř ******************");
-    Console.WriteLine("************** 13.10.2025 ******************");
+    Console.WriteLine("************** 20. 12. 2025 ****************");
     Console.WriteLine("********************************************");
     Console.WriteLine("********************************************");
     Console.WriteLine();
@@ -20,111 +21,39 @@ while (again == "a")
     {
         Console.Write("Nezadali jste celé číslo. Zadejte celé číslo znovu: ");
     }
-
-    for(int radek = 0; radek < velikost; radek++)
+    
+    for (int radek = 0; radek < velikost; radek++)
     {
-
-        int star = 0;
-        int space = 0;
-        
-
-        if (radek == 0 || radek == velikost -1)
+        Console.WriteLine();
+        for(int sloupec = 0; sloupec < velikost; sloupec++)
         {
-            star = velikost;
-        }
-        else if (radek < (velikost-1)/2)
-        {
-            Console.Write("*");
-
-            space = radek -1;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
-
-            space = velikost - radek*2 -2;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
-
-            space = radek -1;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
-        }
-        else if (velikost%2 == 1)
+            if (radek == 0 || //horní okraj
+            radek == velikost -1 || // dolní okraj
+            sloupec == 0 || // levý okraj
+            sloupec == velikost -1 || //pravý okraj
+            radek == sloupec|| //šíkmá čára zleva nahoře dolů doprava
+            sloupec == (velikost - radek - 1)) //šikmá čára zprava nahoře dolů doleva
             {
-               for (radek = 0; radek == (velikost/2) + 1 ; radek++ )
-                {
-                     Console.Write("*");
-
-                    space = velikost/2;
-                     for(int sp = 0; sp < space; sp++)
-                    {
-                    Console.Write("-");
-                    }
-                }
+                Console.Write("*"); // pokud to tak je tak vypsat *
             }
-        
-            
-    
-        else if (radek < velikost)
-        {
-            Console.Write("*");
-
-            space = velikost - radek -2;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
-
-            space = radek*2 - velikost;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
-
-            space = velikost - radek -2;
-            for(int sp = 0; sp < space; sp++)
-                {
-                Console.Write("-");
-                }
-
-            Console.Write("*");
+            else
+            {
+                Console.Write(" "); //tímhle se vyplní zbytek
+            }
         }
-       
-       
-
-
-
-    
-
         
-
-        for(int st = 0; st < star; st++)
-        {
-            Console.Write("*");
-        }
-
-    Console.WriteLine();
     }
 
+    
+
+        
+
+      
 
 
 
 
+    Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
     again = Console.ReadLine();
 }
