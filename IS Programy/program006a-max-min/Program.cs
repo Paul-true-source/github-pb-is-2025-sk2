@@ -57,13 +57,13 @@ Console.Write("Zadejte horní mez (celé číslo): ");
         Console.Write("{0};", myRandNumbs[i]);
     }
 
-    //hledání maxima, pozoice maxima, minimia, pozice minimia
+    //hledání maxima, pozice maxima, minimia, pozice minimia
 
     int max = myRandNumbs[0];
     int min = myRandNumbs[0];
     int posMax = 0;
     int posMin = 0;
-
+    
     // 7, 5, 9,
     for (int i = 1; i < n; i++)
     {
@@ -71,6 +71,7 @@ Console.Write("Zadejte horní mez (celé číslo): ");
         {
             max = myRandNumbs[i];
             posMax = i;
+            
         }
         if (myRandNumbs[i] < min)
         {
@@ -89,9 +90,82 @@ Console.Write("Zadejte horní mez (celé číslo): ");
     Console.WriteLine($"Minimum: {min}");
     Console.WriteLine($"Pozice minima: {posMin}");
     Console.WriteLine("==========================================");
-    Console.WriteLine();
 
 
+//Domácí úkol
+    int pocMax = 0;
+    int pocMin = 0;
+    
+        //všechna maxima
+        
+        for (int i = 0; i < n; i++)
+        {
+            if (max == myRandNumbs[i])
+            {
+              pocMax++;
+            }
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            if (min == myRandNumbs[i])
+            {
+              pocMin++;
+            }
+        }
+
+        if (pocMax > 1) //pokud je maximum napásno víckrát vypíše se toto
+        {
+            //výpis všech maxim
+            Console.WriteLine();
+            Console.WriteLine("Všechna maxima: ");
+            for(int i = 0; i < n; i++)
+            {
+                 if(max == myRandNumbs[i])
+                 {
+                    Console.Write($"{myRandNumbs[i]}; ");
+                 }
+            }
+
+            // pozice všech maxim
+            Console.WriteLine();
+            Console.WriteLine("Pozice všech maxim: ");
+            for (int i = 0; i < n; i++)
+            {
+               if(max == myRandNumbs[i])
+                {
+                   Console.Write($"{i}; ");
+                }
+            }
+        }
+
+
+        if (pocMin > 1) // pokud je minimum víckrát vypíše se toto
+        {
+            // pozice všech minimum
+            Console.WriteLine();
+            Console.WriteLine("Všechna minimum: ");
+            for(int i = 0; i < n; i++)
+            {
+                if(min == myRandNumbs[i])
+                {
+                    Console.Write($"{myRandNumbs[i]}; ");
+                }
+            }
+
+    
+            Console.WriteLine();
+            Console.WriteLine("Pozice všech minimum: ");
+            for(int i = 0; i < n; i++)
+            {
+                if(min == myRandNumbs[i])
+                {
+                    Console.Write($"{i}; ");
+                }
+            }   
+        }
+
+    
 
     //vykreslování přesípacích hodin
     if (max >= 3)
@@ -161,6 +235,8 @@ Console.Write("Zadejte horní mez (celé číslo): ");
         Console.WriteLine("Maximum je menší než 3 => obrazec se nebude vykreslovat!!!");
 
 
+
+    
 
 
 

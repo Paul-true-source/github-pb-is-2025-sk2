@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("program004e-treti_obrazec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24282b73d2db55d1a47bdb6f9c31aa31dad0aaf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ff0ae53249fe630ee9650f30079ddba92e9e70f")]
 [assembly: System.Reflection.AssemblyProductAttribute("program004e-treti_obrazec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("program004e-treti_obrazec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
