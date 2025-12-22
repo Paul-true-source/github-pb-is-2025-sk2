@@ -72,7 +72,7 @@ myStopwatch.Start();
 
         for(int j = 0; j < n - 1 - i ; j++) {
             
-            if(myRandNumbs[j] > myRandNumbs[j+1])
+            if(myRandNumbs[j] < myRandNumbs[j+1])
             {
             int tmp = myRandNumbs[j+1];
             myRandNumbs[j+1] = myRandNumbs[j];
@@ -95,7 +95,7 @@ Console.WriteLine("*******************************************");
 Console.WriteLine("Seřazené čísla: ");
 for(int i = 0; i < n; i++)
     {
-        Console.Write("{0} ", myRandNumbs[i]);
+        Console.Write("{0}; ", myRandNumbs[i]); //od nejmenšího po největší
     }
 
      Console.WriteLine();
@@ -107,10 +107,74 @@ for(int i = 0; i < n; i++)
      Console.WriteLine("Čas seřazení čísel pomocí BS: {0}", myStopwatch.Elapsed);
 
 
-   Console.WriteLine(myRandNumbs[n-1]);
+    //nalezení 2. největšího čísla a použití n
+
+    int max = myRandNumbs[0];
+    int secondMax = int.MinValue;
+    Console.WriteLine($"Druhé největší číslo : {secondMax}");
+
+    for (int i = 1; i < n; i++)
+    {
+        if (myRandNumbs[i] < max && secondMax == int.MinValue)
+        {
+            secondMax = myRandNumbs[i];
+        }
+    }
+
+    Console.WriteLine();
+    Console.WriteLine("*******************************************");
+    Console.WriteLine();
+    Console.WriteLine($"Druhé největší číslo: {secondMax}");
+
+    //implementace nalezení i-tého největšího čísla
+/*int iValue = 3;  // třeba třetí největší
+
+    int actualRank = 1;           // 1. největší je první prvek
+    int currentValue = myRandNumbs[0];
+    int ithLargest = 0;              // sem uložíme výsledek
+    bool found = false;              // zatím nenalezeno
+
+    // Procházíme čísla od druhého prvku
+    for (int j = 1; j < n; j++)
+    {
+        // Zjišťujeme, jestli je aktuální hodnota nová a menší
+        // Pokud není menší, je to duplicita => ignorujeme
+        // Pokud je menší, znamená to, že jsme narazili na odlišnou hodnotu a tu si uložíme
+        if (myRandNumbs[j] < currentValue) //při 1. zjistíme jestli hodnota myRandNumbs[1] je menší než current value, což je myRandNumbs[0]
+        {
+            currentValue = myRandNumbs[j];
+            actualRank++;
+        }
+
+        // Sledujeme, jestli jsme právě narazili na i-tou hodnotu.
+        // Pokud je to i-tá, nastavíme ji (provede se to pouze jednou).
+        if (actualRank == iValue && found==false)
+        {
+            ithLargest = currentValue;
+            found = true; //tohle zajistí že se to už nebude opakovat v téhlé poslední if funkci
+        }
+    }
+    Console.WriteLine($"i-tá největší hodnota ({iValue}): {ithLargest}\n\n");*/
 
 
+    //vykreselení obrázku
+    Console.WriteLine();
+    for (int radek = 0; radek < secondMax; radek++) //vykreslení řádků
+    {
+        for(int sloupec = 0; sloupec < secondMax; sloupec++)
+        {
+            if(radek < 2 || radek > secondMax -3 || sloupec == 0|| sloupec == secondMax -1)
+            {
+                Console.Write("*");
+            }
+            else
+            {
+                Console.Write(" ");
+            }
+        }
 
+        Console.WriteLine();
+    }
 
 
 

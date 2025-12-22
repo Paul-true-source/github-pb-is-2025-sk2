@@ -72,7 +72,7 @@ myStopwatch.Start();
 
         for(int j = 0; j < n - 1 - i ; j++) {
             
-            if(myRandNumbs[j] > myRandNumbs[j+1])
+            if(myRandNumbs[j] < myRandNumbs[j+1]) //bude je to řadit od největšího po nejmenší
             {
             int tmp = myRandNumbs[j+1];
             myRandNumbs[j+1] = myRandNumbs[j];
