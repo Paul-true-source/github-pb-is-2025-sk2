@@ -1,20 +1,21 @@
-﻿using System.Diagnostics;
+﻿using System.Security.Authentication.ExtendedProtection;
+using System.Diagnostics;
 
 string again = "a";
 while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("*********************************************************");
-    Console.WriteLine("****************** Bubble sort program ******************");
+    Console.WriteLine("******************* Shaker Sort Kříž ********************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine("********************** Pavel Bulíř **********************");
-    Console.WriteLine("********************** 13.10.2025 ***********************");
+    Console.WriteLine("********************** 22.12.2025 ***********************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine();
 
-    Console.Write("Zadejte počet generovaných čísel (přirozené číslo): ");
+    Console.Write("Zadejte počet generovaných čísel (celé číslo): ");
     int n;
     while (!int.TryParse(Console.ReadLine(), out n))
     {
@@ -53,81 +54,64 @@ Console.Write("Zadejte horní mez (celé číslo): ");
 
     Console.WriteLine();
     Console.WriteLine("Náhodná čísla: ");
-    for (int i = 0; i < n ; i++)
+    for (int i = 0; i < n ; i++) //vypisuje vygenerovaná čísla
     {
         myRandNumbs[i] = myRandNumb.Next(lowerBound, upperBound+1);
         Console.Write("{0};", myRandNumbs[i]);
     }
 
-    Stopwatch myStopwatch = new Stopwatch();
-
-    int compare = 0; //počet porovnání
-    int change = 0; //počet výměň
-
-
+ Stopwatch myStopwatch = new Stopwatch();
+int change = 0;
+int compare = 0;
 myStopwatch.Start();
-    for(int i =0; i < n - 1 ;i++){
-        //tento cyklus musí zajistit porovnávání hodnot
-        //musí dále zajistit, aby se zmenšoval počet porovnávaných hodnot
-
-        for(int j = 0; j < n - 1 - i ; j++) {
-            
-            if(myRandNumbs[j] < myRandNumbs[j+1])
+for(int i = 0; i < n/2;i++) // zahájí hledání a seřazování
+    {
+        
+        for (int j = 0; j < n - 1 - i; j++) //jedna cesta a porovnávání tam
+        {
+            if (myRandNumbs[j] < myRandNumbs[j+1])
             {
-            int tmp = myRandNumbs[j+1];
+            int tmp = myRandNumbs[j+1];   
             myRandNumbs[j+1] = myRandNumbs[j];
             myRandNumbs[j] = tmp;
             change++;
             }
-            compare ++;
-
+            compare++;
+        }
+        for (int j = n-1; j >=1 + i; j--) //jedna cesta a porovnání zpátky
+        {
+            if (myRandNumbs[j-1] < myRandNumbs[j])
+            {
+                int tmp = myRandNumbs[j];
+                myRandNumbs[j] = myRandNumbs[j-1];
+                myRandNumbs[j-1] = tmp;
+                change++;
+            }
+            compare++;
         }
 
-
-
-
+        
     }
 myStopwatch.Stop();
-
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine("*******************************************");
 Console.WriteLine("Seřazené čísla: ");
 for(int i = 0; i < n; i++)
     {
-        Console.Write("{0}; ", myRandNumbs[i]); //od nejmenšího po největší
+        Console.Write("{0}; ", myRandNumbs[i]); //od největšího po nejmenší
     }
+ Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine($"Počet porovnání: {compare}");
+Console.WriteLine($"Počet výměn: {change}");
+Console.WriteLine();
+Console.WriteLine("Čas seřazení čísel pomocí SS: {0}", myStopwatch.Elapsed);
 
-     Console.WriteLine();
-     Console.WriteLine();
-     Console.WriteLine();
-     Console.WriteLine($"Počet porovnání: {compare}");
-     Console.WriteLine($"Počet výměn: {change}");
-     Console.WriteLine();
-     Console.WriteLine("Čas seřazení čísel pomocí BS: {0}", myStopwatch.Elapsed);
+//1. hodnota = 3. největší hodnota
+//2. hodnota =
 
-
-    //nalezení 2. největšího čísla a použití n
-
-    int max = myRandNumbs[0];
-    int secondMax = int.MinValue;
-    Console.WriteLine($"Druhé největší číslo : {secondMax}");
-
-    for (int i = 1; i < n; i++)
-    {
-        if (myRandNumbs[i] < max && secondMax == int.MinValue)
-        {
-            secondMax = myRandNumbs[i];
-        }
-    }
-
-    Console.WriteLine();
-    Console.WriteLine("*******************************************");
-    Console.WriteLine();
-    Console.WriteLine($"Druhé největší číslo: {secondMax}");
-
-    //implementace nalezení i-tého největšího čísla
-/*int iValue = 3;  // třeba třetí největší
+int iValue = 3;  // třeba třetí největší
 
     int actualRank = 1;           // 1. největší je první prvek
     int currentValue = myRandNumbs[0];
@@ -154,32 +138,71 @@ for(int i = 0; i < n; i++)
             found = true; //tohle zajistí že se to už nebude opakovat v téhlé poslední if funkci
         }
     }
-    Console.WriteLine($"i-tá největší hodnota ({iValue}): {ithLargest}\n\n");*/
+    Console.WriteLine($"3. největší hodnota: {ithLargest} = výška");
 
-
-    //vykreselení obrázku
-    Console.WriteLine();
-    for (int radek = 0; radek < secondMax; radek++) //vykreslení řádků
+    int AP = 0;
+    for (int i = 0; i < n ;i++ )
     {
-        for(int sloupec = 0; sloupec < secondMax; sloupec++)
-        {
-            if(radek < 2 || radek > secondMax -3 || sloupec == 0|| sloupec == secondMax -1)
-            {
-                Console.Write("*");
-            }
-            else
-            {
-                Console.Write(" ");
-            }
-        }
-
-        Console.WriteLine();
+        
+        AP = AP + myRandNumbs [i];
     }
 
+    int ArPr = AP/n;
+
+    Console.WriteLine($"Aritmetický průměr hodnot: {ArPr} = šířka");
 
 
 
 
-    Console.WriteLine("Pro opakování programu stiskněte klávesu a");
-    again = Console.ReadLine();
+//vygenerování kříže
+
+int height = ithLargest;
+int width = ArPr;
+
+int midH1 = (height - 1) / 2; //pokud to bude stejné číslo jako midH2, tak je to lichý => (11-1)/2 = 5
+int midH2 = height / 2; // 11/2 = 5
+
+int midW1 = (width - 1) / 2;
+int midW2 = width / 2;
+
+bool liH = height%2 == 1; //je true pokud je číslo liché
+bool liW = width%2 == 1;
+
+for (int i = 0; i < height; i++)
+{
+    for (int j = 0; j < width; j++)
+    {
+
+        bool horizontal;
+        bool vertical;
+        //zvětšení šířky čáry, pokud bude číslo liché místo * => ***
+       if (liH)
+            horizontal = Math.Abs(i - midH1) <= 1; //Math.Abs = absolutní hodnota z (i - midH1) 
+        else
+            horizontal = (i == midH1 || i == midH2);
+
+        if (liW)
+            vertical = Math.Abs(j - midW1) <= 1;
+        else
+            vertical = (j == midW1 || j == midW2);
+
+        if (horizontal || vertical)
+            Console.Write("*");
+        else
+            Console.Write(" ");
+    }
+    Console.WriteLine();
+
+}
+
+
+
+
+
+
+
+
+Console.WriteLine();
+Console.WriteLine("Pro opakování programu stiskněte klávesu a");
+again = Console.ReadLine();
 }

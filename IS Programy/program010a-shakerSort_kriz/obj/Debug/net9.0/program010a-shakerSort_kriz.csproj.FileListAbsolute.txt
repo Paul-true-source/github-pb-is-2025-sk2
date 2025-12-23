@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\bin\Debug\net9.0\program010a-shakerSort_kriz.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\bin\Debug\net9.0\program010a-shakerSort_kriz.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\bin\Debug\net9.0\program010a-shakerSort_kriz.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\bin\Debug\net9.0\program010a-shakerSort_kriz.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\bin\Debug\net9.0\program010a-shakerSort_kriz.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\refint\program010a-shakerSort_kriz.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\program010a-shakerSort_kriz.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010a-shakerSort_kriz\obj\Debug\net9.0\ref\program010a-shakerSort_kriz.dll
