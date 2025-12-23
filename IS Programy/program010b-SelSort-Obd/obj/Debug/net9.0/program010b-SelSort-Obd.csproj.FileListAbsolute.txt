@@ -1,0 +1,15 @@
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\bin\Debug\net9.0\program010b-SelSort-Obd.exe
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\bin\Debug\net9.0\program010b-SelSort-Obd.deps.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\bin\Debug\net9.0\program010b-SelSort-Obd.runtimeconfig.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\bin\Debug\net9.0\program010b-SelSort-Obd.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\bin\Debug\net9.0\program010b-SelSort-Obd.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.AssemblyInfoInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.AssemblyInfo.cs
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.csproj.CoreCompileInputs.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.sourcelink.json
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\refint\program010b-SelSort-Obd.dll
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.pdb
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\program010b-SelSort-Obd.genruntimeconfig.cache
+C:\Users\bulir\Documents\Git\github-pb-is-2025-sk2\IS Programy\program010b-SelSort-Obd\obj\Debug\net9.0\ref\program010b-SelSort-Obd.dll
