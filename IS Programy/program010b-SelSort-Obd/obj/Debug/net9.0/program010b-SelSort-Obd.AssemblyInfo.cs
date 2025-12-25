@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("program010b-SelSort-Obd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58440a518a8ecbff16f1402e0cbc352df46afcd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39734143e2bb0c54f6af0e29155cdad531e0f4c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("program010b-SelSort-Obd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("program010b-SelSort-Obd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

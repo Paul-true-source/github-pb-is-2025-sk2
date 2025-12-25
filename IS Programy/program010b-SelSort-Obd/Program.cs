@@ -6,7 +6,7 @@ while (again == "a")
 {
     Console.Clear();
     Console.WriteLine("*********************************************************");
-    Console.WriteLine("******************* Shaker Sort Kříž ********************");
+    Console.WriteLine("**************** Selection Sort Obdélník ****************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine("*********************************************************");
     Console.WriteLine("********************** Pavel Bulíř **********************");
@@ -72,18 +72,18 @@ for(int i = 0; i< n-1 ; i++)
         int mincis = i; //bude řadit od nejnižšího čísla a to začne v myRandNumbs[0]
         for(int j = i + 1; j < n ;j++ ) //Kouká se na všechna čísla
         {
-            
+            compare++;
             if(myRandNumbs[j] < myRandNumbs[mincis]) // pokud je další číslo, j = i+1, menší než nejmenší číslo na pozici 0, pak se prohodí pozice
             {
                 mincis = j;
-                compare++;
+                
             }
-            
+        }    
         int temp = myRandNumbs[i];
         myRandNumbs[i] = myRandNumbs[mincis];
         myRandNumbs[mincis] = temp;
         change++;
-        }
+        
 
     }
 
@@ -109,66 +109,75 @@ Console.WriteLine("Čas seřazení čísel pomocí SS: {0}", myStopwatch.Elapsed
 
 //=======1. Hodnota (vybírání z pořadí)=======
 Console.WriteLine("Vyberte, kolikáté číslo chcete určit jako výšku: ");
-int prvni;
-    while (!int.TryParse(Console.ReadLine(), out prvni))
+int iValue;
+    while (!int.TryParse(Console.ReadLine(), out iValue))
     {
         Console.Write("Nezadali jste celé číslo. Zadejte počet čísel znovu: ");
     }
 
 
 
-int iValue = prvni;  // třeba třetí největší
+int rank = 1;
+    int ithLargest = myRandNumbs[n - 1];
 
-    int actualRank = 1;           // 1. největší je první prvek
-    int currentValue = myRandNumbs[0];
-    int ithLargest = 0;              // sem uložíme výsledek
-    bool found = false;              // zatím nenalezeno
-
-    // Procházíme čísla od druhého prvku
-    for (int j = 1; j < n; j++)
+    for (int i = n - 2; i >= 0; i--)
     {
-        // Zjišťujeme, jestli je aktuální hodnota nová a menší
-        // Pokud není menší, je to duplicita => ignorujeme
-        // Pokud je menší, znamená to, že jsme narazili na odlišnou hodnotu a tu si uložíme
-        if (myRandNumbs[j] < currentValue) //při 1. zjistíme jestli hodnota myRandNumbs[1] je menší než current value, což je myRandNumbs[0]
-        {
-            currentValue = myRandNumbs[j];
-            actualRank++;
-        }
+        if (myRandNumbs[i] < myRandNumbs[i + 1])
+            rank++;
 
-        // Sledujeme, jestli jsme právě narazili na i-tou hodnotu.
-        // Pokud je to i-tá, nastavíme ji (provede se to pouze jednou).
-        if (actualRank == iValue && found==false)
+        if (rank == iValue)
         {
-            ithLargest = currentValue;
-            found = true; //tohle zajistí že se to už nebude opakovat v téhlé poslední if funkci
+            ithLargest = myRandNumbs[i];
+            break;
         }
     }
+
     Console.WriteLine($"Vybrali jste: {ithLargest} jako výšku");
+
+
 
 //=======2. Hodnota (Medián)=======
 
 
+int medián;
 
-for (int i = 0;i < n-1 ;i++)
-{
+
     if(n%2 == 0)
     {
-        if ()
-     
+    medián = (myRandNumbs[n/2 - 1] + myRandNumbs[n/2]) / 2;
+
     }
     else
     {
-     Console.Write($"Medián je {myRandNumbs[i/2+1]}");     
+    medián = myRandNumbs[n/2+1];
+        
     }
-}
-    
+
+    Console.Write($"Medián je {medián} = šířka");  
+    Console.WriteLine();
 
 
 
 
 //=================================================Generování obrazce============================================================
+int height = ithLargest;
+int width = medián;
 
+
+for (int i = 0; i < height; i++) // řádky
+{
+    for (int j = 0; j < width; j++) //sloupce
+    {
+        bool top = i < height / 2; //řádky do půlky
+        bool left = j < width / 2; // sloupce do půlky
+
+        if ((top && left) || (!top && !left))
+            Console.Write("*");
+        else
+            Console.Write("-");
+    }
+    Console.WriteLine();
+}
 
 
 
