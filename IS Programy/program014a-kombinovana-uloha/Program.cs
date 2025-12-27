@@ -1,4 +1,6 @@
-﻿string again = "a";
+﻿using System.Net.Mime;
+
+string again = "a";
 while (again == "a")
 {
     Console.Clear();
@@ -114,10 +116,145 @@ Console.WriteLine();
 Console.WriteLine("===============================================");
 //=================================Sorting system (shaker sort)=================================//
 
-for(int i = 0;i <n ; i++)
+for(int j = 0; j < n - 1 ; j++) //budeme procházet celé pole
     {
-        
+        for(int i = 0;i < n -1 - j ; i++) //musíme dát -1 aby jsme pořád nemuseli řešit celé pole a zároven dát -1 aby jsme nepřesáhli pole kvůli RandNumbs[i+1]
+        {
+            if(RandNumbs[i] < RandNumbs[i + 1]) // pokud je číslo na pozici 1 větší než číslo na pozici 0
+            {
+                int tmp = RandNumbs[i];
+                RandNumbs[i] = RandNumbs[i+1]; // číslo na pozici 0 = číslo na pozici 1
+                RandNumbs[i+1] = tmp; // číslo na pozici 1 = číslo na pozici 0
+            }
+
+
+        }
+
+        for(int l = n - 2; l <= 0 ;l--)
+        {
+            if (RandNumbs[l] < RandNumbs[l+1])
+            {
+                int temp = RandNumbs[l];
+                RandNumbs[l] = RandNumbs[l+1];
+                RandNumbs[l+1] = temp;
+            }
+        }
+
+
     }
+//=================================Vypsání seřazených náhodných čísel=================================//
+
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("===============Seřazená čísla==================");
+for(int i = 0; i < n ; i++)
+    {
+        Console.Write("{0};", RandNumbs[i]);
+    }
+Console.WriteLine();
+Console.WriteLine("===============================================");
+
+//=================================Nalezení 2. 3. 4. největší hodnoty=================================//
+
+
+//nalezení 2. největšího čísla
+int actualRank2 = 1;
+bool found2 = false;
+int currentValue2 = RandNumbs[0];
+int druheNej = 0;
+
+int druheHled = 2;
+
+for (int i = 1; i < n ; i++) //víme kde je max takže nepotřebujeme začínat na RandNumbs[0];
+    {
+        if (currentValue2 > RandNumbs[i]) //narazily jsme na 2. největší hodnotu
+        {
+            currentValue2 = RandNumbs[i];
+            actualRank2++;
+        }
+
+
+
+        if (actualRank2 == druheHled && found2 == false)
+        {
+            druheNej = currentValue2;
+            found2 = true;
+        }
+
+    }
+
+
+//nalezení 3. největšího čísla
+int currentValue3 = RandNumbs[0];
+int tretiNej = 0;
+int actualRank3 = 1;
+bool found3 = false;
+int tretiHled = 3;
+
+for (int i = 1; i < n ; i++) //víme kde je max takže nepotřebujeme začínat na RandNumbs[0];
+    {
+        if (currentValue3 > RandNumbs[i]) //narazily jsme na 2. největší hodnotu
+        {
+            currentValue3 = RandNumbs[i];
+            actualRank3++;
+        }
+
+
+
+        if (actualRank3 == tretiHled && found3 == false)
+        {
+            tretiNej = currentValue3;
+            found3 = true;
+        }
+
+    }
+
+
+//nalezení 4. největšího čísla
+int currentValue4 = RandNumbs[0];
+int ctvrteNej = 0;
+int actualRank4 = 1;
+bool found4 = false;
+int ctvrteHled = 4;
+
+for (int i = 1; i < n ; i++) //víme kde je max takže nepotřebujeme začínat na RandNumbs[0];
+    {
+        if (currentValue4 > RandNumbs[i]) //narazily jsme na 2. největší hodnotu
+        {
+            currentValue4 = RandNumbs[i];
+            actualRank4++;
+        }
+
+
+
+        if (actualRank4 == ctvrteHled && found4 == false)
+        {
+            ctvrteNej = currentValue4;
+            found4 = true;
+        }
+
+    }
+Console.WriteLine();
+Console.WriteLine();    
+Console.WriteLine("================Největší čísla=================");
+Console.WriteLine("Druhé největší číslo je: {0}", druheNej); 
+Console.WriteLine("Třetí největší číslo je: {0}", tretiNej);   
+Console.WriteLine("Čtvrté největší číslo je: {0}", ctvrteNej);
+int median;
+if (n%2 == 0)
+ {
+     median = (RandNumbs[n/2 -1] + RandNumbs[n/2])/2;
+ }
+ else
+ {
+      median = RandNumbs[n/2];
+ }
+Console.WriteLine($"Medián je: {median}");
+Console.WriteLine("===============================================");
+Console.WriteLine();
+Console.WriteLine();
+//=================================Medián z generovaných čísel=================================//
+
 
 
 
