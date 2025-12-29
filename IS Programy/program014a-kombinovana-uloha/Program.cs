@@ -42,7 +42,6 @@ Console.WriteLine($"Dolní mez: {dolnimez}");
 Console.WriteLine($"Horní mez: {hornimez}");
 Console.WriteLine("===============================================");
 
-
 //=================================Vytvoření náhodných čísel a jejich vypsání=================================//
 //vytvoření pole
 int [] RandNumbs = new int [n];
@@ -126,8 +125,6 @@ for(int j = 0; j < n - 1 ; j++) //budeme procházet celé pole
                 RandNumbs[i] = RandNumbs[i+1]; // číslo na pozici 0 = číslo na pozici 1
                 RandNumbs[i+1] = tmp; // číslo na pozici 1 = číslo na pozici 0
             }
-
-
         }
 
         for(int l = n - 2; l <= 0 ;l--)
@@ -139,8 +136,6 @@ for(int j = 0; j < n - 1 ; j++) //budeme procházet celé pole
                 RandNumbs[l+1] = temp;
             }
         }
-
-
     }
 //=================================Vypsání seřazených náhodných čísel=================================//
 
@@ -156,13 +151,11 @@ Console.WriteLine("===============================================");
 
 //=================================Nalezení 2. 3. 4. největší hodnoty=================================//
 
-
 //nalezení 2. největšího čísla
 int actualRank2 = 1;
 bool found2 = false;
 int currentValue2 = RandNumbs[0];
 int druheNej = 0;
-
 int druheHled = 2;
 
 for (int i = 1; i < n ; i++) //víme kde je max takže nepotřebujeme začínat na RandNumbs[0];
@@ -172,7 +165,6 @@ for (int i = 1; i < n ; i++) //víme kde je max takže nepotřebujeme začínat 
             currentValue2 = RandNumbs[i];
             actualRank2++;
         }
-
 
 
         if (actualRank2 == druheHled && found2 == false)
@@ -253,12 +245,76 @@ Console.WriteLine($"Medián je: {median}");
 Console.WriteLine("===============================================");
 Console.WriteLine();
 Console.WriteLine();
-//=================================Medián z generovaných čísel=================================//
+
+//=================================Převedení 4. nějvětšího čísla do binární soustavy=================================//
+Console.WriteLine("===============================================");
+
+uint[] BinCis = new uint[32];
+uint celeCislo = (uint)ctvrteNej;
+uint zbytek;
+
+uint k;
+for (k = 0; celeCislo > 0; k++)
+{
+    zbytek = celeCislo % 2;
+    Console.WriteLine("Celá část: {0}/2 = {1} Zbytek: {2}", celeCislo, celeCislo/2 ,zbytek);
+
+    celeCislo /= 2;
+    BinCis[k] = zbytek;
+}
+
+Console.WriteLine($"Číslo {ctvrteNej} je v binární soustavě: ");
+for (int j = (int)k - 1; j >= 0; j--)
+{
+    Console.Write("{0}", BinCis[j]);
+}
+Console.WriteLine();
+Console.WriteLine();
+//==========================================Obrazec==========================================//
+Console.WriteLine("===============================================");
+Console.WriteLine($"Obrazec se skládá z mediánu : {median} jako výšky a 3. největšího čísla: {tretiNej} jako šířky.");
+Console.WriteLine();
 
 
 
+int height = median;
+int width = tretiNej;
 
+int midH1 = (height - 1) / 2; //pokud to bude stejné číslo jako midH2, tak je to lichý => (11-1)/2 = 5
+int midH2 = height / 2; // 11/2 = 5
 
+int midW1 = (width - 1) / 2;
+int midW2 = width / 2;
+
+bool liH = height%2 == 1; //je true pokud je číslo liché
+bool liW = width%2 == 1;
+
+for (int i = 0; i < height; i++)
+{
+    for (int j = 0; j < width; j++)
+    {
+
+        bool horizontal;
+        bool vertical;
+        //zvětšení šířky čáry, pokud bude číslo liché místo * => ***
+       if (liH)
+            horizontal = Math.Abs(i - midH1) <= 1; //Math.Abs = absolutní hodnota z (i - midH1) 
+        else
+            horizontal = (i == midH1 || i == midH2);
+
+        if (liW)
+            vertical = Math.Abs(j - midW1) <= 1;
+        else
+            vertical = (j == midW1 || j == midW2);
+
+        if (horizontal || vertical)
+            Console.Write("*");
+        else
+            Console.Write(" ");
+    }
+    Console.WriteLine();
+
+}
 
     Console.WriteLine();
     Console.WriteLine("Pro opakování programu stiskněte klávesu a");
