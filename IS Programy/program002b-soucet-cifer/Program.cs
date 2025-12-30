@@ -34,7 +34,7 @@
             }
 
             Console.WriteLine();
-            Console.WriteLine($"Součet cifer čísla {number} je {soucet}");
+            Console.WriteLine($"Součet cifer čísla {number} je {soucet}"); 
 
             Console.WriteLine();
             Console.WriteLine("Pro opakování programu stiskněte klávesu a");
