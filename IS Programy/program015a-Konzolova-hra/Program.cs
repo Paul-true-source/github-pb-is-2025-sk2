@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading;
 
+Console.CursorVisible = false;
+int score = 0;
 int playerX = 20; // začínající pozice X hráče
 int playerY = 10; // začínající pozice Y hráče
 int cas = 0; // čas bude přibývat, možná to udělám že bude časový limit
@@ -12,23 +14,36 @@ int sirka = 40; // no... šířka mapy
 int vyska = 20; // výška mapy, abych nemusel pořád psát 40 a 20
 
 List<(int x, int y)> prekazky = new List<(int x, int y)>(); // je podobný Random podtím nebo jako pole když se vytváří, napíše se co se vytvoří, co bude v něm pak název, a pak znovu ale s závorkami nakonci. Když v prekazky budou dvě hodnoty, jakože jsou tak je můžeme vypsat jako prekazky.x a prekazky.y. Funguje to podobně jako pole ale má to dvě čísla v sobě => x+y = bod
+List<(int x, int y, int life)> coin = new List<(int x, int y, int life)>(); //mince, které budou určovat body
 Random rnd = new Random(); //vytvoří datový typ Radnom, který se bude jmenovat rnd = a uloží to do něj nového člověka, kterého naučí házet kostkou
+
+
 
 bool hraBezi = true;
 
 while (hraBezi)
 {
+    Console.Clear();
     // časovač
     cas = cas + 100;
 //====================vygenerování překážek====================
-int nahoda = rnd.Next(0,10); //tohle udělá číslo, které se může objevit jako 0 - 10 => samozžejmě náhodně
-if (nahoda == 0) //pokud se nahoda bude rovnat 0 = 10% šance
+int nahoda = rnd.Next(0,10); //tohle udělá číslo, které se může objevit jako 0 - 10 => samozřejmě náhodně
+if (nahoda < 6) //60% šance na vygenerování překážky
     {
-        int y = rnd.Next(1, vyska -1); //vvygeneruje překážku na pozici 1 až 19 řádku, jelikož 0 a 20 jsou hrany
+        int y = rnd.Next(1, vyska -1); //vvygeneruje překážku na pozici 1 až 18 řádku, jelikož 0 a 19 jsou hrany
         prekazky.Add((sirka -2, y)); //vygeneruje se překážka, = prekazka.Count() = 1 i think, prekážka se vygeneruje úplně vpravo před hranicí proto -2 a to je x a y je už určen předtím pomocí random
     }
 
+//====================vygenerování coinů====================
+int random = rnd.Next(0,10);
+if(random == 0)
+    {
+        int zivotnost = 4000; //definuje, jak dlouho bude coin žít
 
+        int y = rnd.Next(1, vyska -1); // z nějakýho záhadnýho důvodu je 1 včetně ale vyska -1 se tam nepočítá, takže reálně vyska -1 je vyska -2
+        int x = rnd.Next(1, sirka -1);
+        coin.Add((x,y,cas+zivotnost));
+    }
 
 //====================pohyb překážek====================
     for(int i = 0; i < prekazky.Count; i++) // vygenerování pohybů pro překážky
@@ -44,7 +59,7 @@ for (int i = prekazky.Count -1; i >= 0; i--) // i začíná od poslední
     {
         if(prekazky[i].x <= 0) // pokud se xová hodnota dotkne/vnikne do 0 => hranice, tak se smaže
         {
-            prekazky.RemoveAt(i); //smazání hranice
+            prekazky.RemoveAt(i); //smazání překážky
         }
     }
 
@@ -56,15 +71,34 @@ for (int i = prekazky.Count -1; i >= 0; i--) // i začíná od poslední
         }
     }
 
+//====================Mazání coinů po době======================
+for(int i = coin.Count -1; i >=0; i--)
+    {
+        if(cas >= coin[i].life)
+        {
+            coin.RemoveAt(i);
+            continue;
+        }
+
+        if(coin[i].x == playerX && coin[i].y == playerY)
+        {
+            coin.RemoveAt(i);
+            score++;
+            continue;
+        }
+            
+    }
+
+
 
 
     // vstup hráče
     if (Console.KeyAvailable)
     {
-        ConsoleKey key = Console.ReadKey(true).Key; // místo ConsoleKey lze napsat key a ono si to ten datový typ přiřadí samo, ale radši jsem to napsal takhle že něco takovýho taky existuje
+        ConsoleKey key = Console.ReadKey(true).Key; // místo ConsoleKey lze napsat key a ono si to ten datový typ přiřadí samo (var), ale radši jsem to napsal takhle že něco takovýho taky existuje
 
         if (key == ConsoleKey.Escape)
-        hraBezi = false;  //pomocí break vyskočí ze smičky
+        hraBezi = false;  //zastaví cyklus hry while
 
         if (key == ConsoleKey.UpArrow) playerY--;
         if (key == ConsoleKey.DownArrow) playerY++;
@@ -77,16 +111,7 @@ if (playerY > 18) playerY = 18;      // dolní okraj - kolize
 if (playerX < 1) playerX = 1;        // levý okraj - kolize
 if (playerX > 38) playerX = 38;      // pravý okraj - kolize
 
-
-
-
-
-
-
-
-
     // vykreslení
-    Console.Clear();
     Console.WriteLine("Čas: " + cas + " ms");
 
     for (int radek = 0; radek < vyska; radek++)
@@ -107,6 +132,18 @@ if (playerX > 38) playerX = 38;      // pravý okraj - kolize
             }
             else // překážky
             {
+                foreach(var c in coin)
+                {
+                    if(c.x == sloupec && c.y == radek)
+                    {
+                        Console.Write("@");
+                        vykresleno = true;
+                    }
+                }
+            }
+            
+            if(!vykresleno) //překážky
+            {
                 foreach (var p in prekazky)
                 {
                     if (p.x == sloupec && p.y == radek)
@@ -118,6 +155,8 @@ if (playerX > 38) playerX = 38;      // pravý okraj - kolize
                 }
             }
 
+
+
             if(!vykresleno) // to co nic není - prázdno
             Console.Write(".");
             
@@ -127,6 +166,9 @@ if (playerX > 38) playerX = 38;      // pravý okraj - kolize
 
 Console.WriteLine("Stiskni ESC pro ukončení");
     Thread.Sleep(100);
+
+    Console.WriteLine();
+    Console.WriteLine("Tvoje skóre je: {0}", score);
 }
 
 Console.WriteLine();
